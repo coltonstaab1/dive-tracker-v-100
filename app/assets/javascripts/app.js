@@ -1,13 +1,14 @@
 angular
   .module('app', [
-    'ui.Router'
+    'ui.router'
     ])
   .config(function($stateProvider, $urlRouterProvider) {
-    .state('meets', {
-      url: '/meets',
-      templateUrl: 'views/meets.html',
-      controller: 'MeetsController as meets'
-    });
+    $stateProvider
+      .state('meets', {
+        url: '/meets',
+        templateUrl: 'views/meets.html',
+        controller: 'MeetsController as meets'
+      });
 
-    $urlRouterProvider.otherwise('/meets')
-  });
+      $urlRouterProvider.otherwise('/meets')
+    });
