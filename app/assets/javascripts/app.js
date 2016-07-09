@@ -3,5 +3,6 @@ angular
     'ui.Router'
     ])
   .config(function($stateProvider, $urlRouterProvider) {
-
+    $stateProvider
+      .state('meets')
   })
