@@ -1,7 +1,8 @@
 angular
   .module('app', [
     'ui.router',
-    'templates'
+    'templates',
+    'Devise'
     ])
   .config(function($stateProvider, $urlRouterProvider) {
 
