@@ -3,6 +3,11 @@ angular
     'ui.Router'
     ])
   .config(function($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state('meets')
-  })
+    .state('meets', {
+      url: '/meets',
+      templateUrl: 'views/meets.html',
+      controller: 'MeetsController as meets'
+    });
+
+    $urlRouterProvider.otherwise('/meets')
+  });
