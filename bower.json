@@ -1,0 +1,22 @@
+{
+  "name": "dive-tracker-v-100",
+  "homepage": "https://github.com/coltonstaab1/dive-tracker-v-100",
+  "authors": [
+    "coltonstaab1 <colton.staab@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.3.1",
+    "bootstrap": "^3.3.6"
+  }
+}
