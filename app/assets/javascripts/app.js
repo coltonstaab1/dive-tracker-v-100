@@ -8,7 +8,7 @@ angular
     $stateProvider
       .state('meets', {
         url: '/meets',
-        templateUrl: '/views/meets.html',
+        templateUrl: 'meets/_meets.html',
         controller: 'MeetsController as meets'
       });
 
