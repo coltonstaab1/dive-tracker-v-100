@@ -1,2 +1,0 @@
-class MeetsControllerController < ApplicationController
-end
