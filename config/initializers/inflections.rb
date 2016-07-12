@@ -16,5 +16,10 @@
 # end
 
 ActiveSupport::Inflector.inflections do |inflect|
+<<<<<<< HEAD
   inflect.irregular 'Dive', 'Dives'
 end 
+=======
+  inflect.irregular 'Dives', 'Dives'
+end
+>>>>>>> 5ab5fc72f0156bfaa19c8e91d78c484c754de985
