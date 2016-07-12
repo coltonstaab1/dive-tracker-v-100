@@ -11,7 +11,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160709223341) do
+ActiveRecord::Schema.define(version: 20160712210710) do
+
+  create_table "dive_types", force: :cascade do |t|
+    t.integer  "dive_number"
+    t.string   "dive_letter"
+    t.string   "decription"
+    t.float    "degree_of_difficulty"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "description"
+  end
+
+  create_table "dives", force: :cascade do |t|
+    t.integer  "dive_type_id"
+    t.float    "score_1"
+    t.float    "score_2"
+    t.float    "score_3"
+    t.integer  "meet_id"
+    t.integer  "user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "meets", force: :cascade do |t|
+    t.string   "description"
+    t.datetime "datetime"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string   "name"
+    t.string   "hometown"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
