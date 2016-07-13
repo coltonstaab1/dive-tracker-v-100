@@ -17,6 +17,11 @@ angular
           }
         }
       })
+      .state('users', {
+        url: '/users',
+        templateUrl: 'users/_users.html',
+        controller: 'UsersController as ctrl'
+      })
       .state('login', {
         url: '/login',
         templateUrl: 'auth/_login.html',
