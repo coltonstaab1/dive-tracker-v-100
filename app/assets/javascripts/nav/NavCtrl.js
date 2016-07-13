@@ -1,4 +1,4 @@
-function NavCtrl($scope, Auth) {
+function NavCtrl($scope, Auth, $sce) {
   $scope.signedIn = Auth.isAuthenticated;
   $scope.logout = Auth.logout
 
@@ -17,7 +17,9 @@ function NavCtrl($scope, Auth) {
   Auth.currentUser().then(function(user){
     $scope.user = user;
   })
-  
+
+  $scope.logo = $sce.trustAsResourceUrl('../../images/diving-image.jpg');
+
 }
 
 angular
