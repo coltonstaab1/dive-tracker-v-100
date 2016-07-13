@@ -1,5 +1,5 @@
 function UsersController() {
-  
+  this.name = "Colton";
 }
 
 angular
