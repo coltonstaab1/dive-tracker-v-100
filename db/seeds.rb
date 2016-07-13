@@ -6,9 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(email: "colton@yale.edu", password: "yalebulldogs")
-User.create(email: "rachel@princeton.edu", password: "princetontigers")
-User.create(email: "paige@harvard.edu", password: "harvardcrimson")
+User.create(email: "colton@yale.edu", password: "yalebulldogs", team_id: 1)
+User.create(email: "rachel@princeton.edu", password: "princetontigers", team_id: 2)
+User.create(email: "paige@harvard.edu", password: "harvardcrimson", team_id: 3)
 
 Team.create(name: "Yale Bulldogs", hometown: "New Haven, CT")
 Team.create(name: "Princeton Tiger", hometown: "Princeton, NJ")
