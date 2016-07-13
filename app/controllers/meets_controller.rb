@@ -1,6 +1,6 @@
 class MeetsController < ApplicationController
+  
   def index
-
     @meets = Meet.all
 
     respond_to do |f|
