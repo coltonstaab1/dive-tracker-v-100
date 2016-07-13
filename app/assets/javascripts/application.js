@@ -2,5 +2,5 @@
 //= require angular-rails-templates
 //= require angular-ui-router
 //= require AngularDevise
-//= require bootstrap-sprockets
+//= require bootstrap.min
 //= require_tree .
