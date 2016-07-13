@@ -17,9 +17,6 @@ function NavCtrl($scope, Auth, $sce) {
   Auth.currentUser().then(function(user){
     $scope.user = user;
   })
-
-  $scope.logo = $sce.trustAsResourceUrl('../../images/diving-image.jpg');
-
 }
 
 angular
