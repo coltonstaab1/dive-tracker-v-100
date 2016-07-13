@@ -1,7 +1,9 @@
-function MeetsController() {
+function MeetsController(meets) {
+  
   var ctrl = this;
 
-  ctrl.meet = "New Trier Winter Dive Classic";
+  ctrl.meets = meets;
+
 }
 
 angular
