@@ -22,6 +22,11 @@ angular
         templateUrl: 'users/_users.html',
         controller: 'UsersController as ctrl'
       })
+      .state('teams', {
+        url: '/teams',
+        templateUrl: 'teams/_teams.html',
+        controller: 'TeamsController as ctrl'
+      })
       .state('login', {
         url: '/login',
         templateUrl: 'auth/_login.html',
