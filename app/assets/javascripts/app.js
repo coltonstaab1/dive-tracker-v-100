@@ -7,6 +7,11 @@ angular
   .config(function($stateProvider, $urlRouterProvider) {
 
     $stateProvider
+      .state('home', {
+        url: '/home',
+        templateUrl: 'home/_home.html',
+        controller: 'HomeController as ctrl'
+      })
       .state('meets', {
         url: '/meets',
         templateUrl: 'meets/_meets.html',
@@ -48,5 +53,5 @@ angular
         }]
       });
 
-      $urlRouterProvider.otherwise('/meets')
+      $urlRouterProvider.otherwise('home')
     });
