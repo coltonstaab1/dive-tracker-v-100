@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
 
   has_many :dives
   has_many :meets, through: :dives
+  belongs_to :team
 end
