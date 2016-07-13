@@ -11,6 +11,7 @@ gem 'devise', '~> 3.4.0'
 
 group :development, :test do
   gem 'byebug'
+  gem 'pry'
 end
 
 group :development do
