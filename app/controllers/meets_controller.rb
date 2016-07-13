@@ -9,4 +9,13 @@ class MeetsController < ApplicationController
     end
   end
 
+  def show
+    @meet = Meet.find(params[:id])
+
+    respond_to do |f|
+      f.html { render :show }
+      f.json { render json: @meet }
+    end
+  end
+
 end
