@@ -10,7 +10,7 @@ angular
       .state('meets', {
         url: '/meets',
         templateUrl: 'meets/_meets.html',
-        controller: 'MeetsController as meets',
+        controller: 'MeetsController as ctrl',
         resolve: {
           meets: function(MeetService) {
             return MeetService.getMeets();
