@@ -1,5 +1,14 @@
-<ul>
-  <li ng-repeat="meet in ctrl.meets">
-    <h4>{{ meet.description }}</h4>
-  </li>
-</ul>
+<table class="table">
+  <tbody>
+    <tr>
+      <th>Meet</th>
+      <th>Date and Time</th>
+      <th>Show More</th>
+    </tr>
+    <tr ng-repeat="meet in ctrl.meets">
+      <td>{{ meet.description}}</td>
+      <td>{{ meet.datetime}}</td>
+      <td>Show more!</td>
+    </tr>
+  </tbody>
+</table>
