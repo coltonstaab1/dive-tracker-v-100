@@ -27,8 +27,13 @@ angular
         templateUrl: 'users/_users.html',
         controller: 'UsersController as ctrl'
       })
+      .state('usersShow', {
+        url: '/users/:id',
+        templateUrl: 'users/_show.html',
+        controller: "UsersShowController as ctrl"
+      })
       .state('usersEdit', {
-        url: '/users/edit',
+        url: '/users/:id/edit',
         templateUrl: 'users/_edit.html',
         controller: 'UsersEditController as ctrl'
       })
@@ -58,5 +63,5 @@ angular
         }]
       });
 
-      $urlRouterProvider.otherwise('home')
+      //$urlRouterProvider.otherwise('home')
     });

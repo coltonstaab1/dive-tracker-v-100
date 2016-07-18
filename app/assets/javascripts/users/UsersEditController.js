@@ -1,5 +1,6 @@
-function UsersEditController() {
-  this.name = "Edit page!"
+function UsersEditController(user) {
+
+  this.name = "Edit page!";
 }
 
 angular

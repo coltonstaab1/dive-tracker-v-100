@@ -4,7 +4,7 @@
     return $http.get('http://localhost:3000/users.json');
   }
 
-  this.getUsers = function(id) {
+  this.getUser = function(id) {
     return $http.get('http://localhost:3000/users/' + id + '.json');
   }
 
