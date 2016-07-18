@@ -27,6 +27,11 @@ angular
         templateUrl: 'users/_users.html',
         controller: 'UsersController as ctrl'
       })
+      .state('usersEdit', {
+        url: '/users/edit',
+        templateUrl: 'users/_edit.html',
+        controller: 'UsersEditController as ctrl'
+      })
       .state('teams', {
         url: '/teams',
         templateUrl: 'teams/_teams.html',
