@@ -10,6 +10,7 @@ gem 'angular-rails-templates'
 gem 'devise', '~> 3.4.0'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+gem 'active_model_serializers'
 
 group :development, :test do
   gem 'byebug'
