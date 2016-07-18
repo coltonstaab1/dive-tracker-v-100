@@ -8,9 +8,9 @@ USERS SHOW PAGE
         <div class="well profile">
           <div class="col-sm-12">
             <div class="col-xs-12 col-sm-8">
-              <h2>Colton Staab</h2>
+              <h2>{{ ctrl.user.first_name }}  {{ ctrl.user.last_name }}</h2>
               <p>
-                <strong>Team:</strong> Yale Bulldogs
+                <strong>Team:</strong> {{ ctrl.user.team.name }}
               </p>
             </div>
           </div>
