@@ -1,0 +1,47 @@
+.login-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background: #2c3e50;
+  text-align: center;
+  color: #fff;
+  padding: 3em;
+}
+
+.img-circle {
+  width:150px;
+  height:150px;
+  border-radius:45px;
+  overflow:hidden;
+}
+
+.login-page img {
+  background: white;
+}
+
+.animate {
+    -webkit-animation: b .456s 1 ease;
+    -moz-animation: b .456s 1 ease;
+    -o-animation: b .456s 1 ease;
+}
+
+.login-page .rounded-btn {
+    cursor: pointer;
+    border-radius: 50px;
+    color: hsla(0,0%,100%,.8);
+    background: #2c3e50;
+    border: 2px solid hsla(0,0%,100%,.8);
+    font-size: 18px;
+    line-height: 40px;
+    padding: 0 25px;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    transition: all .2s ease-in-out;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
