@@ -45,7 +45,12 @@ angular
       .state('usersEdit', {
         url: '/users/:id/edit',
         templateUrl: 'users/_edit.html',
-        controller: 'UsersEditController as ctrl'
+        controller: 'UsersEditController as ctrl',
+        resolve: {
+          user: function(UsersService, $stateParams) {
+            return UsersService.getUser($stateParams.id);
+          }
+        }
       })
       .state('teams', {
         url: '/teams',
