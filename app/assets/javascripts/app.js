@@ -25,7 +25,12 @@ angular
       .state('users', {
         url: '/users',
         templateUrl: 'users/_users.html',
-        controller: 'UsersController as ctrl'
+        controller: 'UsersController as ctrl',
+        resolve: {
+          users: function(UsersService) {
+            return UsersService.getUsers();
+          }
+        }
       })
       .state('usersShow', {
         url: '/users/:id',
