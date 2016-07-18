@@ -1,5 +1,5 @@
 function MeetsController(meets) {
-  
+
   this.meets = meets.data;
 
 }
