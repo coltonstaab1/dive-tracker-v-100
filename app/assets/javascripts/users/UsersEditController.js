@@ -1,6 +1,7 @@
-function UsersEditController(user) {
+function UsersEditController(user, teams) {
 
   this.user = user.data;
+  this.teams = teams.data;
 
   debugger;
 

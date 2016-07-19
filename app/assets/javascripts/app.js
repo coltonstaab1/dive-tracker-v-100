@@ -49,6 +49,9 @@ angular
         resolve: {
           user: function(UsersService, $stateParams) {
             return UsersService.getUser($stateParams.id);
+          },
+          teams: function(TeamsService, $stateParams) {
+            return TeamsService.getTeams();
           }
         }
       })
