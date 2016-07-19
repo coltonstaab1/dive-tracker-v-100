@@ -5,6 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :dives
-  has_many :meets, through: :dives
+  has_many :meets, -> { distinct }, through: :dives
   belongs_to :team
 end
