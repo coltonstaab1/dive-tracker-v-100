@@ -11,7 +11,7 @@ User.create(email: "rachel@princeton.edu", password: "princetontigers", team_id:
 User.create(email: "paige@harvard.edu", password: "harvardcrimson", team_id: 3)
 
 Team.create(name: "Yale Bulldogs", hometown: "New Haven, CT")
-Team.create(name: "Princeton Tiger", hometown: "Princeton, NJ")
+Team.create(name: "Princeton Tigers", hometown: "Princeton, NJ")
 Team.create(name: "Harvard Crimson", hometown: "Cambridge, MA")
 
 Meet.create(description: "Harvard-Yale-Princeton", datetime: DateTime.new(2016,02,03,12,00,00,'-5'))

@@ -28,8 +28,15 @@
       Team:
     </label><br>
     <select name="team" ng-model="ctrl.team">
-      <option ng-repeat="team in ctrl.user.team" value="{{team.id}}">{{ ctrl.user.team.name }}</option>
+      <option 
+        ng-repeat="team in ctrl.teams" 
+        ng-selected="{ team.id == ctrl.user.team.id }"
+        value="{{team.id}}">
+          {{ team.name }}
+        </option>
     </select><br>
     <input type="submit" value="Edit User">
   </form>
 </div>
+
+<!--ng-options="option.name for option in data.availableOptions track by option.id"  -->
