@@ -1,3 +1,3 @@
 class MeetSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :description, :datetime
 end
