@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root to: 'angular#angular'
   resources :meets
   resources :teams, only: [:index, :show]
-  resources :users, only: [:index, :show]
+  resources :users, only: [:index, :show, :update]
 end
