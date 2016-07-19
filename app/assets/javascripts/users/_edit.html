@@ -1,4 +1,35 @@
-{{ ctrl.user }}
 <div class="container">
-  
+  <form name="form">
+    <label for="first_name">
+      First Name:
+    </label><br>
+    <input 
+      type="text"
+      name="first_name" 
+      ng-model="ctrl.first_name"
+      placeholder="{{ ctrl.user.first_name }}"/><br>
+    <label for="last_name">
+      Last Name:
+    </label><br>
+    <input
+      type="text"
+      name="last_name"
+      ng-model="ctrl.last_name"
+      placeholder="{{ ctrl.user.last_name }}"/><br>
+    <label for="email">
+      Email:
+    </label><br>
+    <input 
+      type="email"
+      name="email" 
+      ng-model="ctrl.email"
+      placeholder="{{ctrl.user.email}}"/><br>
+    <label for="team">
+      Team:
+    </label><br>
+    <select name="team" ng-model="ctrl.team">
+      <option ng-repeat="team in ctrl.user.team" value="{{team.id}}">{{ ctrl.user.team.name }}</option>
+    </select><br>
+    <input type="submit" value="Edit User">
+  </form>
 </div>

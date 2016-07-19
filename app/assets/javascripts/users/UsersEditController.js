@@ -1,7 +1,9 @@
 function UsersEditController(user) {
 
   this.user = user.data;
-  this.name = "Edit page!";
+
+  debugger;
+
 }
 
 angular
