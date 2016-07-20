@@ -5,10 +5,12 @@
       <th>Date and Time</th>
       <th>Show More</th>
     </tr>
-    <tr ng-repeat="meet in ctrl.meets">
+    <tr ng-repeat="meet in ctrl.meets | meetsFilter">
       <td>{{ meet.description}}</td>
       <td>{{ meet.datetime}}</td>
       <td>Show more!</td>
     </tr>
   </tbody>
 </table>
+
+{{ this.datetime }}

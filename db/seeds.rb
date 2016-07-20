@@ -14,9 +14,9 @@ Team.create(name: "Yale Bulldogs", hometown: "New Haven, CT")
 Team.create(name: "Princeton Tigers", hometown: "Princeton, NJ")
 Team.create(name: "Harvard Crimson", hometown: "Cambridge, MA")
 
-Meet.create(description: "Harvard-Yale-Princeton", datetime: DateTime.new(2016,02,03,12,00,00,'-5'))
-Meet.create(description: "Ivy League Championships", datetime: DateTime.new(2016,02,14,12,00,00,'-5'))
-Meet.create(description: "NCAA Championships", datetime: DateTime.new(2016,04,05,17,00,00,'-5'))
+Meet.create(description: "Harvard-Yale-Princeton", datetime: Date.new(2016,02,03))
+Meet.create(description: "Ivy League Championships", datetime: Date.new(2016,02,14))
+Meet.create(description: "NCAA Championships", datetime: Date.new(2016,10,05))
 
 DiveType.create(dive_number: 100 , dive_letter: 'A', degree_of_difficulty: 1.2, description: 'Forward Jump Straight')
 DiveType.create(dive_number: 100 , dive_letter: 'B', degree_of_difficulty: 1.1, description: 'Forward Jump Pike')
