@@ -1,39 +1,32 @@
 <div class="container">
-  <form name="form">
+  <form name="form" ng-submit="ctrl.submit()">
     <label for="first_name">
       First Name:
     </label><br>
     <input 
       type="text"
       name="first_name" 
-      ng-model="ctrl.first_name"
-      placeholder="{{ ctrl.user.first_name }}"/><br>
+      ng-model="ctrl.user.first_name"
+      /><br>
     <label for="last_name">
       Last Name:
     </label><br>
     <input
       type="text"
       name="last_name"
-      ng-model="ctrl.last_name"
-      placeholder="{{ ctrl.user.last_name }}"/><br>
+      ng-model="ctrl.user.last_name"
+      /><br>
     <label for="email">
       Email:
     </label><br>
     <input 
       type="email"
       name="email" 
-      ng-model="ctrl.email"
-      placeholder="{{ctrl.user.email}}"/><br>
+      ng-model="ctrl.user.email"/><br>
     <label for="team">
       Team:
     </label><br>
-    <select name="team" ng-model="ctrl.team">
-      <option 
-        ng-repeat="team in ctrl.teams" 
-        ng-selected="{ team.id == ctrl.user.team.id }"
-        value="{{team.id}}">
-          {{ team.name }}
-        </option>
+    <select ng-model="ctrl.user.team" ng-options="team.name for team in ctrl.teams track by team.id">
     </select><br>
     <input type="submit" value="Edit User">
   </form>
