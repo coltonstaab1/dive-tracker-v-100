@@ -1,12 +1,14 @@
-function UsersEditController(user, teams) {
+function UsersEditController(user, teams, UsersService) {
 
   this.user = user.data;
   this.teams = teams.data;
 
-  this.submit = function() {
-    alert("Form submitted!");
-  }
-
+/*  this.submitForm() = function() {
+    UsersService
+      .updateUser()
+      .then(
+        alert("Form updated!");
+    )};*/
 }
 
 angular
