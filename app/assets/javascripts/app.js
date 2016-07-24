@@ -65,6 +65,10 @@ angular
           }         
         }
       })
+      .state('teamsShow', {
+        url: '/teams/:id',
+        templateUrl: 'teams/_show.html'
+      })
       .state('login', {
         url: '/login',
         templateUrl: 'auth/_login.html',
