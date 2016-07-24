@@ -30,6 +30,9 @@ angular
           {
             meet: function(MeetService, $stateParams) {
               return MeetService.getMeet($stateParams.id);
+            },
+            dive_types: function(DiveTypeService) {
+              return DiveTypeService.getDiveTypes();
             }
           }
       })

@@ -1,5 +1,8 @@
-function MeetsShowController(meet, MeetService) {
-  this.meet = MeetService.addRawScore(meet.data);
+function MeetsShowController(meet, dive_types) {
+
+  this.meet = meet.data;
+  this.dive_types = dive_types.data;
+
 }
 
 angular
