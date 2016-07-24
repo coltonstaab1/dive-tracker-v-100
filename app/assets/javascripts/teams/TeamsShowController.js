@@ -1,5 +1,5 @@
-function TeamsShowController() {
-  this.team = "Yale Bulldogs";
+function TeamsShowController(team) {
+  this.team = team.data;
 }
 
 angular

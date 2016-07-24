@@ -67,7 +67,13 @@ angular
       })
       .state('teamsShow', {
         url: '/teams/:id',
-        templateUrl: 'teams/_show.html'
+        templateUrl: 'teams/_show.html',
+        controller: 'TeamsShowController as ctrl',
+        resolve: {
+          team: function(TeamsService, $stateParams) {
+            return TeamsService.getTeam($stateParams.id);
+          }
+        }
       })
       .state('login', {
         url: '/login',
