@@ -1,5 +1,4 @@
 function MeetsShowController(meet, MeetService) {
-  debugger;
   this.meet = MeetService.addRawScore(meet.data);
 }
 
