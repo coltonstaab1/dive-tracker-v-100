@@ -22,6 +22,17 @@ angular
           }
         }
       })
+      .state('meetsShow', {
+        url: '/meets/:id',
+        templateUrl: 'meets/_show.html',
+        controller: 'MeetsShowController as ctrl',
+        resolve:
+          {
+            meet: function(MeetService, $stateParams) {
+              return MeetService.getMeet($stateParams.id);
+            }
+          }
+      })
       .state('users', {
         url: '/users',
         templateUrl: 'users/_users.html',

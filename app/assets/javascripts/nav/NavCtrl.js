@@ -1,6 +1,6 @@
 function NavCtrl($scope, Auth, $sce) {
   $scope.signedIn = Auth.isAuthenticated;
-  $scope.logout = Auth.logout
+  $scope.logout = Auth.logout;
 
   $scope.$on('devise:new-registration', function (e, user){
     $scope.user = user;
