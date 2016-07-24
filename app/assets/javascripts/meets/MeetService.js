@@ -8,11 +8,10 @@
     return $http.get('http://localhost:3000/meets/' + id + '.json');
   }
 
-  this.calculateRawScore = function (diveData) {
-    diveData['raw_points'] = diveData['score_1'] + diveData['score_2'] + diveData['score_3'];
-    return diveData;
+  this.calculateScore = function(diveData, diveTypeData) {
+    var raw_score = (diveData['score_1'] + diveData['score_2'] + diveData['score_3']);
+    var dive = $.grep(diveTypeData, function(e){ return e.id == diveData.id; })[0];
   }
-
 
 }
 
