@@ -1,5 +1,6 @@
-function MeetsShowController(meet) {
-  this.greeting = "Hello world!";
+function MeetsShowController(meet, MeetService) {
+  debugger;
+  this.meet = MeetService.addRawScore(meet.data);
 }
 
 angular

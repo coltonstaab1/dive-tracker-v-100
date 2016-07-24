@@ -1,2 +1,9 @@
-_show.html
-{{ ctrl.greeting }}
+<h2>{{ ctrl.meet.description}}</h2>
+<h4>Date: {{ ctrl.meet.datetime }}</h4>
+<h5>Winner: </h5>
+<h5>Best dive of the meet: </h5>
+{{ ctrl.meet }}
+
+<ul ng-repeat="dive in ctrl.meet.dives">
+  {{ dive }}
+</ul>

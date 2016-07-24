@@ -8,6 +8,12 @@
     return $http.get('http://localhost:3000/meets/' + id + '.json');
   }
 
+  this.calculateRawScore = function (diveData) {
+    diveData['raw_points'] = diveData['score_1'] + diveData['score_2'] + diveData['score_3'];
+    return diveData;
+  }
+
+
 }
 
 angular
