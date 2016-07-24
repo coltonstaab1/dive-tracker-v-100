@@ -8,11 +8,19 @@
     return $http.get('http://localhost:3000/meets/' + id + '.json');
   }
 
-  this.calculateScore = function(diveData, diveTypeData) {
-    var raw_score = (diveData['score_1'] + diveData['score_2'] + diveData['score_3']);
-    var dive = $.grep(diveTypeData, function(e){ return e.id == diveData.id; })[0];
-  }
+/*  this.calculateScore = function(diveData) {
+    
+    return diveData;
+  }*/
 
+  this.addTotalScore = function(meetData) {
+    meetData['dives'].map(function(dive){
+      var raw_score = (dive['score_1'] + dive['score_2'] + dive['score_3']);
+      var dd = dive['dive_type']['degree_of_difficulty'];
+      dive['total_score'] = raw_score * dd;
+      return dive;
+    })
+  }
 }
 
 angular
