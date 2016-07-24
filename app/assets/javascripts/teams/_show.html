@@ -1,2 +1,6 @@
 <h2>{{ ctrl.team.name }}</h2>
-<h4>Hometown: {{ ctrl.team.hometown}}</h4>
+<h4>Hometown: {{ ctrl.team.hometown}}</h4><br>
+<h4>Divers:</h4>
+<ul ng-repeat="diver in ctrl.team.users">
+  <li><a href="/#/users/{{ diver.id }}">{{ diver.first_name }} {{ diver.last_name }}</a></li>
+</ul>
