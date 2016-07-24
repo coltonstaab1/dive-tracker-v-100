@@ -1,1 +1,20 @@
-{{ ctrl.team }}
+<div class="container bootstrap snipper">
+  <div class="row">
+    <div class="main-box no-header clearfix">
+      <div class="table-responsive">
+        <table class="table user-list">
+          <thead>
+            <th><span>Team</span></th>
+            <th><span>Hometown</span></th>
+          </thead>
+          <tbody ng-repeat="team in ctrl.teams">
+            <tr>
+              <td><a ng-href="/#/team/{{ team.id }}">{{ team.name }}</a></td>
+              <td>{{ team.hometown }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

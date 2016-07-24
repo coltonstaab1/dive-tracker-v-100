@@ -58,7 +58,12 @@ angular
       .state('teams', {
         url: '/teams',
         templateUrl: 'teams/_teams.html',
-        controller: 'TeamsController as ctrl'
+        controller: 'TeamsController as ctrl',
+        resolve: {
+          teams: function(TeamsService) {
+            return TeamsService.getTeams();
+          }         
+        }
       })
       .state('login', {
         url: '/login',

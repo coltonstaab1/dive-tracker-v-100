@@ -1,5 +1,5 @@
-function TeamsController() {
-  this.team = "Yale Bulldogs";
+function TeamsController(teams) {
+  this.teams = teams.data;
 }
 
 angular
