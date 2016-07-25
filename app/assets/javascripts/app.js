@@ -105,10 +105,10 @@ angular
         controller: 'AuthCtrl',
         onEnter: ['$state', 'Auth', function($state, Auth) {
           Auth.currentUser().then(function(){
-            $state.go('home');
+            $state.go('users');
           })
         }]
       });
 
-      //$urlRouterProvider.otherwise('home')
+      $urlRouterProvider.otherwise('users')
     });
