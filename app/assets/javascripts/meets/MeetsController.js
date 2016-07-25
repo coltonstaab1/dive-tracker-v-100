@@ -4,8 +4,6 @@ function MeetsController(meets) {
 
   this.datetime = Date.now();
 
-  debugger;
-
 }
 
 angular
