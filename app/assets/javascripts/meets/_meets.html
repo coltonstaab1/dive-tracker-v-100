@@ -1,14 +1,20 @@
-<table class="table">
-  <tbody>
-    <tr>
-      <th>Meet</th>
-      <th>Date and Time</th>
-      <th>Show More</th>
-    </tr>
-    <tr ng-repeat="meet in ctrl.meets">
-      <td>{{ meet.description}}</td>
-      <td>{{ meet.datetime}}</td>
-      <td>Show more!</td>
-    </tr>
-  </tbody>
-</table>
+<div class="container bootstrap snipper">
+  <div class="row">
+    <div class="main-box no-header clearfix">
+      <div class="table-responsive">
+        <table class="table user-list">
+          <thead>
+            <th><span>Meet</span></th>
+            <th><span>Date</span></th>
+          </thead>
+          <tbody ng-repeat="meet in ctrl.meets">
+            <tr>
+              <td><a href="/#/meets/{{ meet.id }}">{{ meet.description}}</a></td>
+              <td>{{ meet.datetime}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
