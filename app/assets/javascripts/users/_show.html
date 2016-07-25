@@ -11,7 +11,7 @@
               <p>
                 <strong>Recent meets:</strong>
                 <ul>
-                  <li ng-repeat="meet in ctrl.user.meets | limitTo:-3 | orderBy:'datetime':true">{{ meet.description }}</li>
+                  <li ng-repeat="meet in ctrl.user.meets | limitTo:-3 | orderBy:'datetime':true"><a href="/#/meets/{{ meet.id }}">{{ meet.description }}</a></li>
                 </ul>
               </p>
             </div>
