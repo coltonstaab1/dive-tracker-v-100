@@ -4,9 +4,7 @@ function MeetsShowController(meet, dive_types, MeetService) {
   this.dive_types = dive_types.data;
 
   MeetService.addTotalScore(this.meet);
-
-  debugger;
-
+  MeetService.getMeetScore(this.meet)
 }
 
 angular
