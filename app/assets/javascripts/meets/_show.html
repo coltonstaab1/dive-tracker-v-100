@@ -1,10 +1,30 @@
 <h2>{{ ctrl.meet.description}}</h2>
 <h4>Date: {{ ctrl.meet.datetime }}</h4>
 <h5>Winner: </h5>
-<h5>Best dive of the meet: </h5>
-
-{{ ctrl.meet}}
-
-<ul ng-repeat="dive in ctrl.meet.dives">
-  {{ dive }}
+<ul ng-repeat="user in ctrl.meet.users | orderBy : 'meet_score' : true | limitTo : 1 ">
+  <li><a href="/#/users/{{ user.id }}">{{ user.first_name }} {{ user.last_name }}</a></li>
 </ul>
+<h5>Best dive of the meet: </h5>
+<ul ng-repeat="dive in ctrl.meet.dives | orderBy : 'total_score' : true | limitTo : 1 ">
+  <li>{{ dive.dive_type.description }} | {{ dive.total_score }} points</li>
+</ul>
+
+<h5>Results</h5>
+<div class="main-box no-header clearfix">
+  <div class="table-responsive">
+    <table class="table user-list">
+      <thead>
+        <th><span>Diver</span></th>
+        <th><span>Team</span></th>
+        <th><span>Points</span></th>
+      </thead>
+      <tbody ng-repeat="user in ctrl.users | filter: ctrl.search ">
+        <tr>
+          <td><a ng-href="/#/users/{{ user.id }}">{{ user.first_name }} {{ user.last_name }}</a></td>
+          <td>{{ user.email }}</td>
+          <td><a ng-href="/#/teams/{{ user.team.id }}">{{ user.team.name }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
