@@ -26,7 +26,6 @@ class UsersController < ApplicationController
       email: user_params[:email],
       team_id: user_params[:team][:id]
     })
-    binding.pry
   end
 
   private
