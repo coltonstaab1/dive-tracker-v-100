@@ -1,5 +1,5 @@
 <h2>{{ ctrl.meet.description}}</h2>
-<h4>Date: {{ ctrl.meet.datetime }}</h4>
+<h4>Date: {{ ctrl.meet.datetime | date:'MM-dd-yyyy'}}</h4>
 <h5>Winner: </h5>
 <ul ng-repeat="user in ctrl.meet.users | orderBy : 'meet_score' : true | limitTo : 1 ">
   <li><a href="/#/users/{{ user.id }}">{{ user.first_name }} {{ user.last_name }}</a></li>
