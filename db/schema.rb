@@ -16,11 +16,10 @@ ActiveRecord::Schema.define(version: 20160718214148) do
   create_table "dive_types", force: :cascade do |t|
     t.integer  "dive_number"
     t.string   "dive_letter"
-    t.string   "decription"
+    t.string   "description"
     t.float    "degree_of_difficulty"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
-    t.string   "description"
   end
 
   create_table "dives", force: :cascade do |t|
