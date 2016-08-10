@@ -5,7 +5,7 @@ angular
     'Devise'
     ])
   .config(function($stateProvider, $urlRouterProvider) {
-
+    
     $stateProvider
       .state('home', {
         url: '/home',
@@ -40,6 +40,7 @@ angular
         url: '/users',
         templateUrl: 'users/_users.html',
         controller: 'UsersController as ctrl',
+        cache: false,
         resolve: {
           users: function(UsersService) {
             return UsersService.getUsers();
@@ -110,5 +111,5 @@ angular
         }]
       });
 
-      $urlRouterProvider.otherwise('users')
+      $urlRouterProvider.otherwise('home')
     });

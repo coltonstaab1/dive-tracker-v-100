@@ -1,13 +1,17 @@
-function AuthCtrl($scope, $state, Auth) {
+function AuthCtrl($scope, $state, $stateParams, Auth) {
   $scope.login = function() {
     Auth.login($scope.user).then(function(){
-      $state.go('users');
+      $state.transitionTo('users', $stateParams, { 
+        reload: true, inherit: false, notify: true
+      });
     });
   };
 
   $scope.register = function() {
     Auth.register($scope.user).then(function() {
-      $state.go('users');
+      $state.transitionTo('users', $stateParams, { 
+        reload: true, inherit: false, notify: true
+      });
     });
   };
 
