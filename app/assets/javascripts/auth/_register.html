@@ -1,19 +1,37 @@
 <div class="border-form-div">
   <h1>Sign Up</h1>
-  <form ng-submit="register()">
+  <form name="form" ng-submit="register()">
     <div class="input-group">
-      <input type="email" class="form-control" placeholder="Email" ng-model="user.email" required="required">
-      <div ng-messages="form.username.$error" ng-if="form.email.$touched">
-        <div ng-message="required">Email address is required</div>
-        <div ng-message="email">Must be a valid email!</div>
+      <input
+          name="email"
+          type="email"
+          ng-model="user.email"
+          minlength="2"
+          required="required" 
+          placeholder="Email"/>
+   
+      <div ng-messages="form.email.$error" ng-if="form.email.$touched">
+          <div ng-message="required">Email is required</div>
+          <div ng-message="minlength">Email must be longer than 2 characters</div>
+          <div ng-message="email">Email address must be valid</div>
       </div>
     </div>
     <div class="input-group">
-      
+      <input 
+        name="password"
+        type="password" 
+        ng-model="user.password"
+        minlength="6"
+        required="required"
+        placeholder="Password"/>
+
+      <div ng-messages="form.password.$error" ng-if="form.password.$touched">
+        <div ng-message="required">Password is required</div>
+        <div ng-message="minlength">Password must be longer than 6 characters</div>
+      </div>
+
+      <input type="submit" class="btn btn-primary" value="Sign Up">
+
     </div>
-    <div class="input-group">
-      <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
-    </div>
-    <input type="submit" class="btn btn-primary" value="Sign Up">
   </form>
 </div>
