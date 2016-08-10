@@ -1,7 +1,36 @@
 <div class="border-form-div">
   <form name="form" ng-submit="newMeet()">
-    <div class="input-group"></div>
+    <div class="input-group" ng-repeat="i in ctrl.getNumber(ctrl.number) track by $index">Dive {{$index+1}}<br>
+      <input 
+        name="meet.dives[$index][score_1]"
+        placeholder="Score 1"
+      />
+      <input 
+        name="meet.dives[$index][score_2]"
+        placeholder="Score 2"
+      />
+      <input 
+        name="meet.dives[$index][score_3]"
+        placeholder="Score 3"
+      />
+      <input 
+        type="hidden" 
+        name="meet.dives[$index][user_id]" 
+        value="current_user.id"
+      />
+      <input 
+        type="hidden" 
+        name="meet.dives[$index][meet_id]"
+        value="ctrl.meet_id" 
+      />
+    </div>
+    <input type="submit" class="btn btn-primary" value="Submit Meet">
   </form>
 </div>
 
-Hi, this is the new meets page
+{{ current_user }}
+
+<!-- 
+I think what I need to do is create a bunch of new dives and then have them be iterated over with an ng-repeat directive?
+Yep. That's definitely what I need to do: http://stackoverflow.com/questions/19859959/validating-nested-form-in-angular
+ -->
