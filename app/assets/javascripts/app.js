@@ -2,10 +2,11 @@ angular
   .module('app', [
     'ui.router',
     'templates',
-    'Devise'
+    'Devise',
+    'ngMessages'
     ])
   .config(function($stateProvider, $urlRouterProvider) {
-    
+
     $stateProvider
       .state('home', {
         url: '/home',

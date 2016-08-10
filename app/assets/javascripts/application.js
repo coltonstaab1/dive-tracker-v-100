@@ -4,4 +4,5 @@
 //= require AngularDevise
 //= require jquery
 //= require bootstrap.min
+//= require angular-messages
 //= require_tree .
