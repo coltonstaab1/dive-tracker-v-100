@@ -2,12 +2,28 @@
   <div class="row">
     <div class="main-box no-header clearfix">
       <div class="table-responsive">
+      <h3>Past meets</h3>
         <table class="table user-list">
           <thead>
             <th><span>Meet</span></th>
             <th><span>Date</span></th>
           </thead>
           <tbody ng-repeat="meet in ctrl.meets" ng-if="ctrl.convertToDate(meet) < ctrl.today ">
+            <tr>
+              <td><a href="/#/meets/{{ meet.id }}">{{ meet.description}}</a></td>
+              <td>{{ meet.datetime | date: 'longDate'}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-responsive">
+        <h3>Upcoming meets</h3>
+        <table class="table user-list">
+          <thead>
+            <th><span>Meet</span></th>
+            <th><span>DAte</span></th>
+          </thead>
+          <tbody ng-repeat="meet in ctrl.meets" ng-if="ctrl.convertToDate(meet) >= ctrl.today ">
             <tr>
               <td><a href="/#/meets/{{ meet.id }}">{{ meet.description}}</a></td>
               <td>{{ meet.datetime | date: 'longDate'}}</td>

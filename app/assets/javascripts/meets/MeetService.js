@@ -28,6 +28,12 @@
     }
   }
 
+  this.upcoming = function(meetData) {
+    var today = new Date();
+    var date = new Date(meetData.datetime);
+    meetData['upcoming'] = ( today < date ? true : false )
+  }
+
 }
 
 angular
