@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
   has_many :dives
   has_many :meets, -> { distinct }, through: :dives
   belongs_to :team
+
 end

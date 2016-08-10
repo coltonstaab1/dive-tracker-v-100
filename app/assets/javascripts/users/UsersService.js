@@ -9,7 +9,7 @@
   }
 
   this.updateUser = function(user) {
-    return $http.patch('http://localhost:3000/users/' + user.id , { user });
+    $http.patch('http://localhost:3000/users/' + user.id , { user });
   }
 }
 

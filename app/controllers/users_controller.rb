@@ -20,12 +20,22 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.update(user_params)
+    @user.update({
+      first_name: user_params[:first_name],
+      last_name: user_params[:last_name],
+      email: user_params[:email],
+      team_id: user_params[:team][:id]
+    })
+    binding.pry
   end
 
   private
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :team_id)
+      params.require(:user).permit(
+        :first_name, 
+        :last_name, 
+        :email, 
+        team: [:id])
     end
 
 end
