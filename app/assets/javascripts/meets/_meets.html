@@ -7,7 +7,7 @@
             <th><span>Meet</span></th>
             <th><span>Date</span></th>
           </thead>
-          <tbody ng-repeat="meet in ctrl.meets">
+          <tbody ng-repeat="meet in ctrl.meets" ng-if="ctrl.convertToDate(meet) < ctrl.today ">
             <tr>
               <td><a href="/#/meets/{{ meet.id }}">{{ meet.description}}</a></td>
               <td>{{ meet.datetime | date: 'longDate'}}</td>

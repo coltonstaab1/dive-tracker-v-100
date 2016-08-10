@@ -1,9 +1,12 @@
 function MeetsController(meets) {
 
   this.meets = meets.data;
-  this.today = Date.now();
+  this.today = new Date();
 
-  debugger;
+  this.convertToDate = function(meet) {
+    var new_date = new Date(meet.datetime);
+    return new_date;
+  }
 
 }
 
