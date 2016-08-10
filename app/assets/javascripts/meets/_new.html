@@ -1,28 +1,32 @@
 <div class="border-form-div">
   <form name="form" ng-submit="newMeet()">
     <div class="input-group" ng-repeat="i in ctrl.getNumber(ctrl.number) track by $index">Dive {{$index+1}}<br>
-      <select ng-model="ctrl.meet.dives[$index][dive_type]" ng-options="dive_type.dive_letter_number for dive_type in ctrl.dive_types">
+      <select ng-model="ctrl.meet.dives[$index].dive_type" ng-options="dive_type.dive_letter_number for dive_type in ctrl.dive_types">
       </select><br>
+      <div>
+        {{ ctrl.meet.dives[$index].dive_type.description }}: 
+        {{ ctrl.meet.dives[$index].dive_type.degree_of_difficulty }}
+      </div>
       <input 
-        name="meet.dives[$index][score_1]"
+        name="meet.dives[$index].score_1"
         placeholder="Score 1"
       />
       <input 
-        name="meet.dives[$index][score_2]"
+        name="meet.dives[$index].score_2"
         placeholder="Score 2"
       />
       <input 
-        name="meet.dives[$index][score_3]"
+        name="meet.dives[$index].score_3"
         placeholder="Score 3"
       />
       <input 
         type="hidden" 
-        name="meet.dives[$index][user_id]" 
+        name="meet.dives[$index].user_id" 
         value="current_user.id"
       />
       <input 
         type="hidden" 
-        name="meet.dives[$index][meet_id]"
+        name="meet.dives[$index].meet_id"
         value="ctrl.meet_id" 
       />
     </div>
