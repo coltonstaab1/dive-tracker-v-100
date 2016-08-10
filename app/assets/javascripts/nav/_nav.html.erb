@@ -18,7 +18,7 @@
     <ul class="nav navbar-nav">
       <li ng-hide="signedIn()"><a href="#/login">Log In</a></li>
       <li ng-hide="signedIn()"><a href="#/register">Sign Up</a></li>
-      <li ng-show="signedIn()"><a href="#/users">Welcome {{ user.first_name }} {{ user.last_name }}</a></li>
+      <li ng-show="signedIn()"><a href="#/users/{{ user.id }}">Welcome, {{ user.first_name }} {{ user.last_name }}</a></li>
       <li ng-show="signedIn()"><a href="#/users">Divers</a></li>
       <li ng-show="signedIn()"><a href="#/meets">Meets</a></li>
       <li ng-show="signedIn()"><a href="#/teams">Teams</a></li>
