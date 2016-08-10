@@ -1,7 +1,11 @@
-function UsersShowController(user) {
+function UsersShowController(user, $stateParams, Auth, $scope) {
+
+  Auth.currentUser().then(function(user){
+    $scope.current_user = user;
+  })
 
   this.user = user.data;
-  this.name = "Hi, this is the show page!";
+
 }
 
 angular

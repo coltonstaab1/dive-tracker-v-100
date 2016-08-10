@@ -14,9 +14,13 @@
                   <li ng-repeat="meet in ctrl.user.meets | limitTo:-3 | orderBy:'datetime':true"><a href="/#/meets/{{ meet.id }}">{{ meet.description }}</a></li>
                 </ul>
               </p>
+              <p>
+                <div ng-show="current_user.id == ctrl.user.id"><a href="#/users/{{ ctrl.user.id }}/edit">Edit User Profile</a></div>
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
 </div>
+
