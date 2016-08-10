@@ -37,6 +37,11 @@ angular
             }
           }
       })
+      .state('meetsNew', {
+        url: '/meets/:id/new',
+        templateUrl: 'meets/_new.html',
+        controller: "MeetsNewController as ctrl"
+      })
       .state('users', {
         url: '/users',
         templateUrl: 'users/_users.html',
