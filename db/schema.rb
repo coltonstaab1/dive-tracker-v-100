@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160718214148) do
+ActiveRecord::Schema.define(version: 20160810221239) do
 
   create_table "dive_types", force: :cascade do |t|
     t.integer  "dive_number"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20160718214148) do
     t.float    "degree_of_difficulty"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.string   "dive_letter_number"
   end
 
   create_table "dives", force: :cascade do |t|
