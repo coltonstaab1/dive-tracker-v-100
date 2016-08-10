@@ -40,7 +40,12 @@ angular
       .state('meetsNew', {
         url: '/meets/:id/new',
         templateUrl: 'meets/_new.html',
-        controller: "MeetsNewController as ctrl"
+        controller: "MeetsNewController as ctrl",
+        resolve: {
+          dive_types: function(DiveTypeService) {
+            return DiveTypeService.getDiveTypes();
+          }
+        }
       })
       .state('users', {
         url: '/users',
