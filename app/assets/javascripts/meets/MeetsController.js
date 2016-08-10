@@ -1,7 +1,9 @@
 function MeetsController(meets) {
 
   this.meets = meets.data;
-  this.datetime = Date.now();
+  this.today = Date.now();
+
+  debugger;
 
 }
 

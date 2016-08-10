@@ -10,7 +10,7 @@
           <tbody ng-repeat="meet in ctrl.meets">
             <tr>
               <td><a href="/#/meets/{{ meet.id }}">{{ meet.description}}</a></td>
-              <td>{{ meet.datetime | date: 'MM-dd-yyyy'}}</td>
+              <td>{{ meet.datetime | date: 'longDate'}}</td>
             </tr>
           </tbody>
         </table>
