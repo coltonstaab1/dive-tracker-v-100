@@ -9,10 +9,13 @@
                 <strong>Team:</strong> {{ ctrl.user.team.name }}
               </p>
               <p>
-                <strong>Recent meets:</strong>
-                <ul>
+                <strong><a ui-sref="usersShow.meets">Meets</a></strong>
+<!--                 <ul>
                   <li ng-repeat="meet in ctrl.user.meets | limitTo:-3 | orderBy:'datetime':true"><a href="/#/meets/{{ meet.id }}">{{ meet.description }}</a></li>
-                </ul>
+                </ul> -->
+              </p>
+              <p>
+                <strong><a ui-sref="usersShow.dives">Dives</a></strong>
               </p>
               <p>
                 <div ng-show="current_user.id == ctrl.user.id"><a href="#/users/{{ ctrl.user.id }}/edit">Edit User Profile</a></div>
@@ -24,3 +27,4 @@
     </div>
 </div>
 
+<div ui-view></div>
