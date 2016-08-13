@@ -1,8 +1,8 @@
 function DiveService($http) {
 
   this.createDives = function(dives) {
-    for(var i=0; i< dives.length; i++) {
-      // pick up here
+    debugger;
+    $http.post('http://localhost:3000/dives/' { dives });
     }
   }
 }

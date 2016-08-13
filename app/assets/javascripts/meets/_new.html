@@ -1,40 +1,37 @@
 <div class="border-form-div">
-  <form name="form" ng-submit="newMeet()">
+  <form name="form" ng-submit="ctrl.submit()">
     <div class="input-group" ng-repeat="i in ctrl.getNumber(ctrl.number) track by $index">Dive {{$index+1}}<br>
-      <select ng-model="ctrl.meet.dives[$index].dive_type" ng-options="dive_type.dive_letter_number for dive_type in ctrl.dive_types">
+      <select ng-model="ctrl.dives[$index].dive_type" ng-options="dive_type.dive_letter_number for dive_type in ctrl.dive_types">
       </select><br>
       <div>
-        {{ ctrl.meet.dives[$index].dive_type.description }}: 
-        {{ ctrl.meet.dives[$index].dive_type.degree_of_difficulty }}
+        {{ ctrl.dives[$index].dive_type.description }}: 
+        {{ ctrl.dives[$index].dive_type.degree_of_difficulty }}
       </div>
       <input 
-        name="meet.dives[$index].score_1"
+        ng-model="ctrl.dives[$index].score_1"
         placeholder="Score 1"
+        type="number"
       />
       <input 
-        name="meet.dives[$index].score_2"
+        ng-model="ctrl.dives[$index].score_2"
         placeholder="Score 2"
+        type="number"
       />
       <input 
-        name="meet.dives[$index].score_3"
+        ng-model="ctrl.dives[$index].score_3"
         placeholder="Score 3"
+        type="number"
       />
       <input 
         type="hidden" 
-        name="meet.dives[$index].user_id" 
-        value="current_user.id"
+        ng-init="ctrl.dives[$index].meet_id=ctrl.meet_id" 
       />
       <input 
         type="hidden" 
-        name="meet.dives[$index].meet_id"
-        value="ctrl.meet_id" 
-      />
+        ng-init="ctrl.dives[$index].user_id=1"/>
+
     </div>
     <input type="submit" class="btn btn-primary" value="Submit Meet">
   </form>
 </div>
 
-<!-- 
-I think what I need to do is create a bunch of new dives and then have them be iterated over with an ng-repeat directive?
-Yep. That's definitely what I need to do: http://stackoverflow.com/questions/19859959/validating-nested-form-in-angular
- -->
