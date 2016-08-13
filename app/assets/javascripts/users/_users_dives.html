@@ -1,1 +1,15 @@
-Dives partial
+<table>
+  <thead>
+    <th><span>Dive</span></th>
+    <th><span>Date Competed</span></th>
+    <th><span>Score</span></th>
+  </thead>
+  <tbody>
+    <tbody ng-repeat="dive in ctrl.user.dives">
+      <tr>
+        <td>{{ dive.score_1 }}</td>
+        <td>{{ dive.score_2 }}</td>
+        <td>{{ dive.score_3 }}</td>
+      </tr>
+  </tbody>
+</table>

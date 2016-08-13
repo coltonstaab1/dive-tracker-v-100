@@ -1,1 +1,13 @@
-{{ ctrl.user }}
+<table>
+  <thead>
+    <th><span>Meet</span></th>
+    <th><span>Date Competed</span></th>
+  </thead>
+  <tbody>
+    <tbody ng-repeat="meet in ctrl.user.meets ">
+      <tr>
+        <td>{{ meet.description }}</td>
+        <td>{{ meet.datetime | date: 'longDate' }}</td>
+      </tr>
+  </tbody>
+</table>
