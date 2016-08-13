@@ -1,5 +1,5 @@
-function UsersMeetsController() {
-
+function UsersMeetsController(user) {
+  this.user = user;
 }
 
 angular

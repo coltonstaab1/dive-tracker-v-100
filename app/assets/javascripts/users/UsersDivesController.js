@@ -1,5 +1,5 @@
-function UsersDivesController() {
-
+function UsersDivesController(user) {
+  this.user = user;
 }
 
 angular

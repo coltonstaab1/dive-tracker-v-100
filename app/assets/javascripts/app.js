@@ -84,12 +84,12 @@ angular
       .state('usersShow.meets', {
         url: '/meets',
         templateUrl: 'users/_users_meets.html',
-        controller: 'UsersMeetsController as meets_ctrl',
+        controller: 'UsersMeetsController as meets_ctrl'
       })
       .state('usersShow.dives', {
         url: '/dives',
         templateUrl: 'users/_users_dives.html',
-        controller: 'UsersDivesContrller as dive_ctrl'
+        controller: 'UsersDivesController as dive_ctrl'
       })
       .state('teams', {
         url: '/teams',
