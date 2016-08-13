@@ -1,4 +1,4 @@
-function MeetsNewController(dive_types, $stateParams, Auth, $scope) {
+function MeetsNewController(DiveService, dive_types, $stateParams, Auth, $scope) {
 
   Auth.currentUser().then(function(user){
     $scope.user = user;
@@ -16,12 +16,9 @@ function MeetsNewController(dive_types, $stateParams, Auth, $scope) {
 
   this.submit = function() {
     // DiveService.createDives(this.user);
-    DivesService.createDives(this.dives);
+    DiveService.createDives(this.dives);
     alert('Meet has been updated successfully');
-    debugger;
   }
-
-  debugger;
 }
 
 angular

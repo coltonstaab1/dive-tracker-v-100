@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :teams, only: [:index, :show]
   resources :users, only: [:index, :show, :update]
   resources :dive_type, only: :index
+  resources :dives, only: :create
 end

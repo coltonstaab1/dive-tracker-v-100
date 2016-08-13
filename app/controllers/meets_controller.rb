@@ -17,9 +17,5 @@ class MeetsController < ApplicationController
       f.json { render json: @meet }
     end
   end
-
-  def create
-
-  end
-
+  
 end
