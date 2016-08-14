@@ -11,8 +11,6 @@ function NavCtrl($scope, $state, Auth) {
     $scope.user = user;
   })
 
-  debugger;
-
 }
 
 angular

@@ -1,7 +1,10 @@
 <div class="border-form-div">
   <form name="form" ng-submit="ctrl.submit()">
     <div class="input-group" ng-repeat="i in ctrl.getNumber(ctrl.number) track by $index">Dive {{$index+1}}<br>
-      <select ng-model="ctrl.dives[$index].dive_type" ng-options="dive_type.dive_letter_number for dive_type in ctrl.dive_types">
+      <select 
+        ng-model="ctrl.dives[$index].dive_type" 
+        ng-options="dive_type.dive_letter_number for dive_type in ctrl.dive_types"
+        required="required" />
       </select><br>
       <div>
         {{ ctrl.dives[$index].dive_type.description }}: 
@@ -11,16 +14,32 @@
         ng-model="ctrl.dives[$index].score_1"
         placeholder="Score 1"
         type="number"
+        name="dive_{{$index}}-score_1"
+        required="required"
+        min=0
+        max=10
+        step=0.5
       />
+      <div ng-messages="form.dive_0-score_1.$error" ng-if="form.dive_0-score_1.$touched">
+        <div ng-message="required">Email is required</div>
+      </div>
       <input 
         ng-model="ctrl.dives[$index].score_2"
         placeholder="Score 2"
         type="number"
+        required="required"
+        min=0
+        max=10
+        step=0.5
       />
       <input 
         ng-model="ctrl.dives[$index].score_3"
         placeholder="Score 3"
         type="number"
+        required="required"
+        min=0
+        max=10
+        step=0.5
       />
       <input 
         type="hidden" 
@@ -29,7 +48,6 @@
       <input 
         type="hidden" 
         ng-init="ctrl.dives[$index].user_id=user.id"/>
-
     </div>
     <input type="submit" class="btn btn-primary" value="Submit Meet">
   </form>
