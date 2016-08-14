@@ -5,7 +5,7 @@ function UsersShowController(user, $stateParams, Auth, $scope) {
   })
 
   this.user = user.data;
-
+  
 }
 
 angular
