@@ -7,7 +7,8 @@ class DivesController < ApplicationController
           score_2: dive[1][:score_2],
           score_3: dive[1][:score_3],
           user_id: dive[1][:user_id],
-          dive_type_id: dive[1][:dive_type][:id]
+          dive_type_id: dive[1][:dive_type][:id],
+          meet_id: dive[1][:meet_id]
         )
     end
   end
