@@ -1,6 +1,5 @@
 function meetsFilter() {
   return function(meet) {
-    debugger;
     return meet.datetime >= Date.now();
   }
 }

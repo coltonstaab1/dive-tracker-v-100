@@ -1,5 +1,6 @@
-function UsersDivesController(user) {
-  this.user = user;
+function UsersDivesController(user, MeetService) {
+  this.user = user['data'];
+  MeetService.addTotalScore(this.user);
 }
 
 angular

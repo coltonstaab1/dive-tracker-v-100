@@ -7,9 +7,9 @@
   <tbody>
     <tbody ng-repeat="dive in ctrl.user.dives">
       <tr>
-        <td>{{ dive.score_1 }}</td>
-        <td>{{ dive.score_2 }}</td>
-        <td>{{ dive.score_3 }}</td>
+        <td>{{ dive.dive_type.description }}</td>
+        <td>{{ dive.meet.datetime | date: 'longDate' }}</td>
+        <td>{{ dive.total_score }}</td>
       </tr>
   </tbody>
 </table>
