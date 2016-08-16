@@ -10,9 +10,6 @@
               </p>
               <p>
                 <strong><a ui-sref="usersShow.meets">Meets</a></strong>
-<!--                 <ul>
-                  <li ng-repeat="meet in ctrl.user.meets | limitTo:-3 | orderBy:'datetime':true"><a href="/#/meets/{{ meet.id }}">{{ meet.description }}</a></li>
-                </ul> -->
               </p>
               <p>
                 <strong><a ui-sref="usersShow.dives">Dives</a></strong>
@@ -26,7 +23,5 @@
       </div>
     </div>
 </div>
-
-{{ signedIn() }}
 
 <div ui-view></div>

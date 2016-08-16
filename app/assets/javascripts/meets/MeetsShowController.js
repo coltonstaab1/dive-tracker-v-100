@@ -6,6 +6,7 @@ function MeetsShowController(meet, dive_types, MeetService) {
   MeetService.addTotalScore(this.meet);
   MeetService.getMeetScore(this.meet)
   MeetService.upcoming(this.meet);
+
 }
 
 angular
